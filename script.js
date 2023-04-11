@@ -18,9 +18,9 @@ fetch('http://api.open-notify.org/iss-now.json')
               .then(data => {
                 const region = document.createElement('div');
                 if (data.countryName.length > 0) {
-                    region.textContent = `The ISS is currently above: ${data.countryName}.`;
+                    region.textContent = `The ISS is currently above: ${data.countryName}`;
                 } else {
-                    region.textContent = `The ISS is currently above: the ${data.localityInfo.informative[0].name} (the ${data.localityInfo.informative[0].description}).`;
+                    region.textContent = `The ISS is currently above: the ${data.localityInfo.informative[0].name} (the ${data.localityInfo.informative[0].description})`;
                 }
                 div.appendChild(region).appendChild(coordinates);
               })
